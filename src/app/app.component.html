@@ -1,3 +1,31 @@
+
+<div class="landing">
+  <br> 
+  <p>
+    Prezados,<br>
+    Desculpem, mas meu background é em bootstrap...,<br>
+    Dessa forma peço  sua compreensão, pois desenvolvi<br>
+    a aplicação nos dias 21 e 22 sem conhecer a fundo o framework Angular e <br>
+    tive muitas dificuldades para fazer a página.<br><br>
+    Vários erros oriundos  da minha falta de familiaridade com a linguagem,<br> 
+    além de conflitos entre versões do typescript
+    e  entre componentes me<br> impediram de implementar todas  as funcionalidades<br>
+    solicitadas.<br>
+    <br>
+    Consegui implementar o consumo dos dados da API, <br> 
+    o qual foi feito equivalente ao 
+    server-side rendering, <br>trazendo apenas 10 registros por página,<br>
+    e também a páginação dos dados.<br>
+  </p>
+  <p>
+    A aplicação desenvolvida está logo abaixo.<br>
+    Obrigado pela oportunidade !
+  </p>
+
+</div>
+
+
+
 <br>
 <h1 style="text-align: center;font-weight: bold;font-size: 40px;color:blue">Desafio Teia </h1>
 
@@ -15,17 +43,18 @@
     <td>{{photos.albumId}}</td>
     <td>{{photos.id}}</td>
     <td>{{photos.title}}</td>
-    <td><img class="imagem" src={{photos.thumbnailUrl}} width="40" height="20" alt="Imagem"  /> </td> 
+    <td><img class="imagem" src={{photos.thumbnailUrl}}  alt="Imagem"  /> </td> 
     <td><input type="checkbox" /> </td> 
     <td><input type="text" /> </td> 
   </tr>
   <tr>
 </table>
 
-<mat-paginator
+<mat-paginator 
  [length]="totalItems" 
  [pageSize]="pageSize" 
  [pageIndex]="currentPage" 
  (page)="pageChanged($event)"
  >
 </mat-paginator>
+

@@ -1,6 +1,17 @@
 # DesafioTeia
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.1.
+Para executar:
+Faça o clone do projeto
+na pasta do projeto efetue o seguinte comando:
+npm install
+
+para carregar a aplicação:
+
+ng serve
+
+caso não possua o angular-cli na sua máquina,
+siga as instruções para instalação em:  https://angular.io/cli
 
 ## Development server
 

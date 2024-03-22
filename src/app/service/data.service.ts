@@ -31,6 +31,10 @@ export class DataService {
     return this.http.get<Post[]>(this.apiUrl,{ params});
   }
 
+  getTodos(): Observable<Post[]> {
+    return this.http.get<Post[]>(this.apiUrl);
+  }
+
 }
 
 

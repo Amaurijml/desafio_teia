@@ -4,6 +4,10 @@ import { DataService } from './service/data.service';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+
+
 
 interface Post {
   albumId: number;
@@ -16,7 +20,7 @@ interface Post {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, MatPaginatorModule,MatExpansionModule],
+  imports: [CommonModule, MatPaginatorModule,MatExpansionModule,MatFormFieldModule,FormsModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
@@ -33,6 +37,8 @@ currentPage = 0;
 constructor(private data_service: DataService) {}
 
 items =  this.data_service.getAllPosts(this.currentPage, this.pageSize);
+
+
 
 pageChanged(event: PageEvent) {
 
