@@ -13,7 +13,7 @@ table {
     height:20px;
   }
   .landing {
-    height:600px;
+    height:700px;
     width:100%;
     background-color: brown;
     color:beige;
@@ -26,3 +26,15 @@ p {
     line-height: 32px
     
 }
+
+.float-container {
+  border: 3px solid #fff;
+  padding: 20px;
+}
+
+.float-child {
+  width: 50%;
+  float: left;
+  padding: 20px;
+  border: 2px solid red;
+}  

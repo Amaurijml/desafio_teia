@@ -1,4 +1,4 @@
-
+<!--
 <div class="landing">
   <br> 
   <p>
@@ -15,7 +15,7 @@
     Consegui implementar o consumo dos dados da API, <br> 
     o qual foi feito equivalente ao 
     server-side rendering, <br>trazendo apenas 10 registros por página,<br>
-    e também a páginação dos dados.<br>
+    a páginação dos dados e a busca por álbum e por Id.<br>
   </p>
   <p>
     A aplicação desenvolvida está logo abaixo.<br>
@@ -24,8 +24,7 @@
 
 </div>
 
-
-
+-->
 <br>
 <h1 style="text-align: center;font-weight: bold;font-size: 40px;color:blue">Desafio Teia </h1>
 
@@ -58,3 +57,61 @@
  >
 </mat-paginator>
 
+<div style="width: 100%;">
+
+  <div class="pesquisaAlbum" style="width: 50%; height: 250px; float: left;  overflow:auto;">
+      <label><b>Pesquisa por Álbum</b> </label>
+      <input name="pesqAlbum" type="text" style="margin-left:15px" inputmode="numeric" placeholder="Busca por Álbum (1 a 100)" #album>
+      <button class="primary" style="margin-left:15px" type="button" (click)="buscaAlbum(album.value)">Pesquisar</button>
+      <br>
+      <br>
+      
+        <table style="margin-left:5px;" >
+          <tr>
+            <th>Album</th>
+            <th>Música</th>
+            <th>título</th>
+            <th>Capa</th> 
+          </tr>
+          <tr *ngFor="let group of grouped" let i=index;>
+            <td>{{group.albumId}}</td>
+            <td>{{group.id}}</td>
+            <td>{{group.title}}</td>
+            <td><img class="imagem" src={{group.thumbnailUrl}}  alt="Imagem"  /> </td> 
+          </tr>
+          <tr>
+        </table>
+    </div>
+
+    <div class="pesquisaAlbum" style="margin-left: 55%; height: 100px; ">
+      <label><b>Pesquisa por Id</b></label>
+      <input type="text" inputmode="numeric"style="margin-left:15px" placeholder="Busca por Id (1 a 5000)" #id>
+      <button class="primary" style="margin-left:15px" type="button" (click)="buscaId(id.value)">Pesquisar</button>
+      <br>
+      <br>
+        <table style="margin-left:5px;" >
+          <tr>
+            <th>Album</th>
+            <th>Música</th>
+            <th>título</th>
+            <th>Capa</th> 
+          </tr>
+          <tr *ngFor="let group of groupedId" let i=index;>
+            <td>{{group.albumId}}</td>
+            <td>{{group.id}}</td>
+            <td>{{group.title}}</td>
+            <td><img class="imagem" src={{group.thumbnailUrl}}  alt="Imagem"  /> </td> 
+          </tr>
+          <tr>
+      </table>
+    </div>
+
+</div>
+
+
+
+<!--
+<input type="text" placeholder="Filter by city" #filter>
+<button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+<app-housing-location *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation"></app-housing-location>
+-->
